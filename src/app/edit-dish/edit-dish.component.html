@@ -1,0 +1,46 @@
+<div class="container">
+	<div [hidden]="dishUpdated">
+		<h3 style="margin-top: 30px;">Update Dish Information <span style="font-size:small">* is a required field</span></h3>
+
+		<form (ngSubmit)="onSubmit()">
+			
+      <md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="4" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="title" type="text" required [(ngModel)]="dish.title" name="title" placeholder="Title">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+
+      <md-input-container>
+				<textarea mdInput id="description" [(ngModel)]="dish.description" name="description" placeholder="Description" required></textarea>
+			</md-input-container>
+
+      <md-grid-list cols="4" rowHeight="60px">
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<md-input-container>
+						<input mdInput id="pricer" type="number" [(ngModel)]="dish.price" name="price" step="1" placeholder="Price">
+					</md-input-container>
+				</md-grid-tile>
+			</md-grid-list>
+
+      Image &nbsp;
+			<input id="tile" type="file" id="dishImage" name="dishImage" (change)="uploadImageService.fileChangeEvent($event)">
+			<br><br>
+
+      <md-grid-list cols="20" rowHeight="60px">
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+						<button class="mat-primary" md-raised-button type="submit">Update Dish</button>
+				</md-grid-tile>
+				<md-grid-tile [colspan]="2" [rowspan]="1">
+					<a class="mat-warn" md-raised-button routerLink="/">Cancel</a>
+				</md-grid-tile>
+			</md-grid-list>
+			
+		</form>
+	</div>
+	<div class="row" [hidden]="!dishUpdated"
+	>
+		<h3>Dish updated successfully!</h3>
+	</div>
+</div>

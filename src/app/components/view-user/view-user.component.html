@@ -1,0 +1,46 @@
+<div class="container">	
+	<div style="margin-top: 20px;">
+		<a routerLink="/userList"><i class="fa fa-long-arrow-left"></i> Go Back</a>
+		<span> / </span>
+	</div>
+	<md-grid-list cols="9" rowHeight="100px">
+		<md-grid-tile [colspan]="3" [rowspan]="5">
+			<div class="panel panel-default">
+				<div style="top:60px; left:10px; width:500px; height:500px;">
+  <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+			</div>
+		</md-grid-tile>
+		<md-grid-tile [colspan]="6">
+			<h3>{{user.firstName}}</h3>
+		</md-grid-tile>
+		<md-grid-tile [colspan]="3" [rowspan]="3">
+			<md-list>
+				<md-list-item>
+					<p><strong>Description: </strong>{{user.lastName}}</p>
+				</md-list-item>
+				<md-list-item>
+					<p><strong>Food: </strong>{{rating.food}}</p>
+				</md-list-item>
+				<md-list-item>
+					<p><strong>Service: </strong>{{rating.service}}</p>
+				</md-list-item>
+				<md-list-item>
+					<p><strong>Price: </strong>{{rating.price}}</p>
+				</md-list-item>
+				<md-list-item>
+					<p><strong>Chance of coming back: </strong></p>
+					<p [hidden]="comeback!=1">Yes</p>
+					<p [hidden]="comeback!=0">No</p>
+				</md-list-item>
+			</md-list>
+		</md-grid-tile>
+	</md-grid-list>
+
+</div>

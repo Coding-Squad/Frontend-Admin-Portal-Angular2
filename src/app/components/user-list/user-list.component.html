@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="table-responsive" style="margin-top: 30px;">
+		<table id="userListTable" class="table bordered highlight">
+			<thead>
+				<tr>
+          <th>ID</th>
+					<th>FirstName</th>
+					<th>LastName</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor = "let user of userList">
+					<td>{{user.id}}</td>
+					<td><a (click)="onSelect(user)" style="cursor:pointer">{{user.firstName}}</a></td>
+					<td>{{user.lastName}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+  <br>
+</div>

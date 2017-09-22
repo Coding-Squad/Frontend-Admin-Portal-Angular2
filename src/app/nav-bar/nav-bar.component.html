@@ -1,0 +1,9 @@
+<md-toolbar class="mat-primary">
+<h3 >ADMIN PORTAL</h3>
+<span class="example-spacer" ></span>
+<span [hidden]="!loggedIn" routerLink="/addNewDish"><a md-button>Add</a></span>
+<span [hidden]="!loggedIn" routerLink="/dishList"><a md-button>Dishes List</a></span>
+<span [hidden]="!loggedIn" routerLink="/userList"><a md-button>Users List</a></span>
+<span [hidden]="!loggedIn" routerLink="/prediction"><a md-button>Statistics</a></span>
+<span [hidden]="!loggedIn" (click)="logout()"><a md-button>LogOut</a></span>
+</md-toolbar>

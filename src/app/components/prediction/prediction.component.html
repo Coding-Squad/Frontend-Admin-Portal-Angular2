@@ -1,0 +1,45 @@
+
+
+<div class="container">
+  <div class="row">
+
+    <md-grid-list cols="2" rowHeight="2:1">
+  <md-grid-tile>
+<div style="display: block" style="position:absolute; left:10px; width:400px; height:400px;">
+  <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+</div>
+  </md-grid-tile>
+  <md-grid-tile>
+
+
+<div>
+  <div style="display: block" style="margin-top: 150px; left:10px; width:500px; height:500px;">
+    <form (ngSubmit)="onDate()" class="navbar-form">
+					<div class="form-group">
+                        <material-datepicker [(date)]="datetime"></material-datepicker>
+						<input type="text" name="searchByDate" [(ngModel)]="datetime" class="form-control" placeholder="Enter date" [hidden]=true/>
+					</div>
+					<button type="submit" class="btn btn-default">Generate</button>
+				</form>
+    <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>
+
+  </md-grid-tile>
+  
+</md-grid-list>
+  </div>
+</div>
+

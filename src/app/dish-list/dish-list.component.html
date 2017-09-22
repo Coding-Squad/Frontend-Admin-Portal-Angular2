@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="table-responsive" style="margin-top: 30px;">
+		<table id="dishListTable" class="table bordered highlight">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Price</th>
+          <th>Operation</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor = "let dish of dishList">
+					
+					<td><a (click)="onSelect(dish)" style="cursor:pointer">{{dish.title}}</a></td>
+					<td>{{dish.description}}</td>
+					<td>{{dish.price}}</td>
+					<td>
+						<input hidden="hidden" name="id" />
+						<button md-button (click)="openDialog(dish)" value="delete"><span class="fa fa-times"></span> delete</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+  
+	
+</div>
