@@ -11,10 +11,8 @@ This portal is reserved only to admin where he can statistics generated with dat
 
 If your are running this project for the first time then you have to install all the dependencies (NG valor, Angular material ..) with `npm install`
 
-### you can use one of this 3 accounts to login to the client portal 
+### The access is reserved to the admin so you have to use his account
 
-- amine : amine
-- haouala : haouala
 - admin : admin
 
 ## Tools used
