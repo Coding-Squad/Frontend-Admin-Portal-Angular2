@@ -1,28 +1,58 @@
-# AdminPortal
+# Intelligent Restaurant - AdminPortal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0-beta.0.
+Intelligent restaurant is a project that allows a dynamic restaurant management through the use of some Machine learning algorithms (Decisional tree J48). Each client will have a specific menu list generated with his previous visits.
 
-## Development server
+This portal is reserved only to admin where he can statistics generated with data collected from clients. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to run
 
-## Code scaffolding
+- Run the backend part (Spring boot project) on STS or any other IDE
+- Run the frontend part with `ng serve`. You can choose the desired port for example `ng serve --port 4200`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+If your are running this project for the first time then you have to install all the dependencies (NG valor, Angular material ..) with `npm install`
 
-## Build
+### you can use one of this 3 accounts to login to the client portal 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+- amine : amine
+- haouala : haouala
+- admin : admin
 
-## Running unit tests
+## Tools used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Spring Boot
+- Spring Security
+- Hibernate
+- MySQL
+- Angular 2
+- Angular Material
+- NG Valor (chart)
+- Weka API (Machine Learning)
 
-## Running end-to-end tests
+## Screenshot
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
+![admin-login](https://user-images.githubusercontent.com/17054973/31073348-dfe460fc-a76b-11e7-8e7a-af5c0f921b59.jpg)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![admin-list](https://user-images.githubusercontent.com/17054973/31073361-e5698098-a76b-11e7-8a38-13e59c0a817e.jpg)
+
+![admin-add](https://user-images.githubusercontent.com/17054973/31073367-eaea862a-a76b-11e7-8227-65128d88952e.jpg)
+
+![admin-detail](https://user-images.githubusercontent.com/17054973/31073374-f25fe06c-a76b-11e7-9033-967cd7c2bf92.jpg)
+
+![ml-chart](https://user-images.githubusercontent.com/17054973/31073385-013c0ba6-a76c-11e7-8376-27d5a7771d3d.jpg)
+
+![ml-horraires](https://user-images.githubusercontent.com/17054973/31073394-03dc9a4c-a76c-11e7-9d22-970551003fae.jpg)
+
+![ml-retour](https://user-images.githubusercontent.com/17054973/31073401-0764f790-a76c-11e7-9f7f-c2ac938269cf.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
